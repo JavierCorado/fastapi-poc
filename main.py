@@ -13,5 +13,5 @@ app = FastAPI()
 async def root():
     resp = supabase.table('users').select("*").execute()
     data = resp.data[0]
-    return data
+    return {"row data": data}
 
